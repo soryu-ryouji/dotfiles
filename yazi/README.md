@@ -1,0 +1,2 @@
+# Ryouji's yazi config
+
