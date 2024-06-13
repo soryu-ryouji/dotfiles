@@ -90,29 +90,6 @@ function tt
 	end
 	rm -f -- "$tmp"
 end
-
-# function tt
-#     set -l ID $fish_pid  # 获取进程ID
-#     set -l OUTPUT_FILE "/tmp/$USER/joshuto-cwd-$ID"
-#     mkdir -p (dirname $OUTPUT_FILE)
-#     env joshuto --output-file "$OUTPUT_FILE" $argv
-#     set exit_code $status
-# 
-#     switch $exit_code
-#         case 0
-#             # 正常退出
-#             return
-#         case 101
-#             # 输出包含当前目录
-#             set JOSHUTO_CWD (cat "$OUTPUT_FILE")
-#             cd "$JOSHUTO_CWD"
-#         case 102
-#             # 输出选择的文件
-#             # 如果需要的话，在这里处理这种情况
-#         case '*'
-#             echo "退出码: $exit_code"
-#     end
-# end
  
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
