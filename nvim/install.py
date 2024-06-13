@@ -17,6 +17,9 @@ def move_on_linux():
     home_path = os.path.expanduser('~')
     nvim_folder = os.path.join(home_path, ".config/nvim")
 
+    if os.path.exists(nvim_folder):
+        shutil.rmtree(nvim_folder)
+
     shutil.copytree(script_dir, nvim_folder)
 
 if __name__ == "__main__":
