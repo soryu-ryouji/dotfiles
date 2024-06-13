@@ -13,7 +13,11 @@ def move_on_windows():
     shutil.copytree(script_dir, nvim_folder)
 
 def move_on_linux():
-    print("Not NotImplement")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    home_path = os.path.expanduser('~')
+    nvim_folder = os.path.join(home_path, ".config/nvim")
+
+    shutil.copytree(script_dir, nvim_folder)
 
 if __name__ == "__main__":
     os_system = platform.system()
